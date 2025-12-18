@@ -1,0 +1,10 @@
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\bin\Debug\netcoreapp3.1\AisinIX.Amateras.Common.deps.json
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\bin\Debug\netcoreapp3.1\AisinIX.Amateras.Common.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\bin\Debug\netcoreapp3.1\AisinIX.Amateras.Common.pdb
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.csproj.AssemblyReference.cache
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.AssemblyInfoInputs.cache
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.AssemblyInfo.cs
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.csproj.CoreCompileInputs.cache
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.pdb

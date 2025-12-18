@@ -1,0 +1,2 @@
+AisinIX.Amateras.Common
+===============

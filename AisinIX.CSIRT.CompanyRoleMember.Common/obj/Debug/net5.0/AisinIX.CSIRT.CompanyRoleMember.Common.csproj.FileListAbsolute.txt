@@ -1,0 +1,16 @@
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\bin\Debug\net5.0\NOTICE.TXT
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\bin\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.deps.json
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\bin\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\bin\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.pdb
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\bin\Debug\net5.0\AisinIX.Amateras.Common.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\bin\Debug\net5.0\AisinIX.Amateras.Common.pdb
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.csproj.AssemblyReference.cache
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.AssemblyInfoInputs.cache
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.AssemblyInfo.cs
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.csproj.CoreCompileInputs.cache
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX..11F41EC5.Up2Date
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\refint\AisinIX.CSIRT.CompanyRoleMember.Common.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.Common.pdb
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.Common\obj\Debug\net5.0\ref\AisinIX.CSIRT.CompanyRoleMember.Common.dll

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0-preview.2.21154.6" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="6.0.0-preview.2.21154.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0-preview.2.21154.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="5.0.1" />
+    <PackageReference Include="Npgsql" Version="6.0.11" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.csproj" />
+    <ProjectReference Include="..\AisinIX.CSIRT.CompanyRoleMember.Common\AisinIX.CSIRT.CompanyRoleMember.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AisinIX.Amateras.Common\AisinIX.Amateras.Common.csproj" />
+    <ProjectReference Include="..\AisinIX.Amateras.Common.Log4Net\AisinIX.Amateras.Common.Log4Net.csproj" />
+    <ProjectReference Include="..\AisinIX.Amateras.Common.Oracle\AisinIX.Amateras.Common.Oracle.csproj" />
+  </ItemGroup>
+
+</Project>
