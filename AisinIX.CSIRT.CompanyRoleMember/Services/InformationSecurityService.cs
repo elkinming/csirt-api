@@ -33,7 +33,34 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Services
             _logger.LogDebug("┏DB接続Open");
             var resultRaw = await _informationSecurityDBAccessor.GetAllInformationSecurityRecords();
             var dataDb =  resultRaw.AsList();
+            var dataDto =  MapDBtoDTO(dataDb);
+            return dataDto;
+        }
+
+
+        /// <summary>
+        /// 情報セキュリティ検索
+        /// </summary>
+        public async Task<List<InformationSecurityDto>> QueryInformationSecuritySearchAsync(
+            InformationSecuritySearchDto dto,
+            CancellationToken ct = default)
+        {
+            _logger.LogDebug("┏DB接続Open");
+            var resultRaw = await _informationSecurityDBAccessor.GetInformationSecurityRecordsBySearch(dto);
+            var dataDb =  resultRaw.AsList();
+            var dataDto =  MapDBtoDTO(dataDb);
+            return dataDto;
+        }
+
+
+        private List<InformationSecurityDto> MapDBtoDTO(List<InformationSecurity> dataDb)
+        {
             var dataDto =  dataDb.Select(x => new InformationSecurityDto(x)).ToList();
+
+            if (dataDto.Count == 0)
+            {   
+                return dataDto;                
+            }
 
             int mainRecordIndex = 0;
             int mainRecordChildrenNumber = 1;

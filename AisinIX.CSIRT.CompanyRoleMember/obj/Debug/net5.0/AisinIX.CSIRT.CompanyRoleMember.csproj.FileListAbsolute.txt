@@ -18,3 +18,4 @@ C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMemb
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\obj\Debug\net5.0\refint\AisinIX.CSIRT.CompanyRoleMember.dll
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.pdb
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\obj\Debug\net5.0\ref\AisinIX.CSIRT.CompanyRoleMember.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.sourcelink.json

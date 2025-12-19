@@ -8,3 +8,4 @@ C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMemb
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.csproj.CoreCompileInputs.cache
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.dll
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.pdb
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.sourcelink.json

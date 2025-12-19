@@ -85,3 +85,4 @@ C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMemb
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.WebApi\obj\Debug\net5.0\ref\AisinIX.CSIRT.CompanyRoleMember.WebApi.dll
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.WebApi\bin\Debug\net5.0\Npgsql.dll
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.WebApi\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember.WebApi\obj\Debug\net5.0\AisinIX.CSIRT.CompanyRoleMember.WebApi.sourcelink.json

@@ -13,5 +13,9 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Services
         Task<List<InformationSecurityDto>> QueryInformationSecurityListAsync(
             CancellationToken ct = default
         );
+        Task<List<InformationSecurityDto>> QueryInformationSecuritySearchAsync(
+            InformationSecuritySearchDto dto,
+            CancellationToken ct = default
+        );
     }
 }

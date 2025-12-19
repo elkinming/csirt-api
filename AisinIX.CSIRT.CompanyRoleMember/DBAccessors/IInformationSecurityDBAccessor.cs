@@ -7,5 +7,6 @@ namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
     public interface IInformationSecurityDBAccessor
     {
         Task<IEnumerable<InformationSecurity>> GetAllInformationSecurityRecords();
+        Task<IEnumerable<InformationSecurity>> GetInformationSecurityRecordsBySearch( InformationSecuritySearchDto dto);
     }
 }

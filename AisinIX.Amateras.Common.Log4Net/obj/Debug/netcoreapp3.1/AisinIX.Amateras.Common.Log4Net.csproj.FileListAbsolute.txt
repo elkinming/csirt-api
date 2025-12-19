@@ -11,3 +11,4 @@ C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMemb
 c:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common.Log4Net\obj\Debug\netcoreapp3.1\AisinIX..7570774A.Up2Date
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common.Log4Net\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.Log4Net.dll
 C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common.Log4Net\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.Log4Net.pdb
+C:\Pro\Hoyutech\VS\AisinIX.CSIRT.CompanyRoleMember\AisinIX.CSIRT.CompanyRoleMember\AisinIX.Amateras.Common.Log4Net\obj\Debug\netcoreapp3.1\AisinIX.Amateras.Common.Log4Net.sourcelink.json
