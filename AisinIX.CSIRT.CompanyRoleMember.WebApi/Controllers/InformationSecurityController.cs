@@ -27,9 +27,9 @@ public class InformationSecurityController : ControllerBase
 
     [HttpGet]
     [Route("information_security/all")]
-    public async Task<IActionResult> GetAllInformationSecurity()
+    public async Task<IActionResult> GetAllInformationSecurity([FromQuery] string searchKeyword)
     {
-        var recordList = await informationSecurityService.QueryInformationSecurityListAsync();
+        var recordList = await informationSecurityService.QueryInformationSecurityListAsync(searchKeyword);
         ApiResponse<List<InformationSecurityDto>> response = new ApiResponse<List<InformationSecurityDto>>();
         response.statusCode = 200;
         response.message = "Success";

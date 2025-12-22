@@ -28,10 +28,11 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Services
         /// 会社体制情報一覧取得（Async）
         /// </summary>
         public async Task<List<InformationSecurityDto>> QueryInformationSecurityListAsync(
+            string searchKeyword,
             CancellationToken ct = default)
         {
             _logger.LogDebug("┏DB接続Open");
-            var resultRaw = await _informationSecurityDBAccessor.GetAllInformationSecurityRecords();
+            var resultRaw = await _informationSecurityDBAccessor.GetAllInformationSecurityRecordsByKeyword(searchKeyword);
             var dataDb =  resultRaw.AsList();
             var dataDto =  MapDBtoDTO(dataDb);
             return dataDto;

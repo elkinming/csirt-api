@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AisinIX.CSIRT.CompanyRoleMember.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e966814e173993e4b85a453e2b2514d1e4784392")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+863ff063e31c5c4eb8aee3c5ac88eeaed9e7a672")]
 [assembly: System.Reflection.AssemblyProductAttribute("AisinIX.CSIRT.CompanyRoleMember.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AisinIX.CSIRT.CompanyRoleMember.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

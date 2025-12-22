@@ -5,11 +5,40 @@ using AisinIX.CSIRT.CompanyRoleMember.Db;
 using Dapper;
 using System;
 using System.Text;
+using Npgsql.Replication;
 namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
 {
     public class InformationSecurityDBAccesor: IInformationSecurityDBAccessor
     {
         private readonly DapperDbContext dbContext;
+
+        private const string baseSql = @"SELECT
+            
+                company_code1           companyCode1, 
+                company_code2           companyCode2, 
+                company_type            companyType, 
+                company_name            companyName, 
+                company_name_en         companyNameEn, 
+                company_short_name      companyShortName, 
+                group_code              groupCode, 
+                region                  region, 
+                country                 country, 
+                role_code               roleCode,
+                ops_email               opsEmail,
+                ops_url                 opsUrl,
+                ops_email_url           opsEmailUrl,
+                ops_vulnerability       opsVulnerability,
+                ops_info                opsInfo,
+                dept_name               deptName,
+                location                location,
+                position                position,
+                person_name             personName,
+                person_code             personCode,
+                email                   email,
+                emergency_contact       emergencyContact,
+                language                language
+
+            FROM public.v_information_security ";
         public InformationSecurityDBAccesor(DapperDbContext dbContext)
         {
             this.dbContext = dbContext;
@@ -20,7 +49,59 @@ namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
         /// </summary>
         public async Task <IEnumerable <InformationSecurity>> GetAllInformationSecurityRecords()
         {
-            return await dbContext.DbConnection.QueryAsync<InformationSecurity>(GetAllInformationSecurityRecordsSql());
+            return await dbContext.DbConnection.QueryAsync<InformationSecurity>(baseSql);
+        }
+
+        public async Task <IEnumerable <InformationSecurity>> GetAllInformationSecurityRecordsByKeyword( string searchKeyword)
+        {
+            var parameters = new Dictionary<string, object>();
+            var sql = GetInformationSecuritySqlByKeyword(searchKeyword, out parameters);
+            return await dbContext.DbConnection.QueryAsync<InformationSecurity>(sql, parameters);
+        }
+
+        private static string GetInformationSecuritySqlByKeyword(string searchKeyword, out Dictionary<string, object> parameters )
+        {
+
+            parameters = new Dictionary<string, object>();
+            // parameters["p0"] = searchKeyword;
+            parameters["p0"] = $"%{searchKeyword}%";
+            parameters["p1"] = -1;
+
+            if (int.TryParse(searchKeyword, out var roleCode))
+            {
+                parameters["p1"] = roleCode;
+            }
+
+            string sql = @$"
+            {baseSql}
+            WHERE
+                (company_code1 ILIKE @p0) OR
+                (company_code2 ILIKE @p0) OR
+                (company_type ILIKE @p0) OR
+                (company_name ILIKE @p0) OR
+                (company_name_en ILIKE @p0) OR
+                (company_short_name ILIKE @p0) OR
+                (group_code ILIKE @p0) OR
+                (region ILIKE @p0) OR
+                (country ILIKE @p0) OR
+                (role_code = @p1 ) OR
+                (ops_email ILIKE @p0) OR
+                (ops_url ILIKE @p0) OR
+                (ops_email_url ILIKE @p0) OR
+                (ops_vulnerability ILIKE @p0) OR
+                (ops_info ILIKE @p0) OR
+                (dept_name ILIKE @p0) OR
+                (location ILIKE @p0) OR
+                (position ILIKE @p0) OR
+                (person_name ILIKE @p0) OR
+                (person_code ILIKE @p0) OR
+                (email ILIKE @p0) OR
+                (emergency_contact ILIKE @p0) OR
+                (language ILIKE @p0)
+            ;
+            ";
+
+            return sql;
         }
 
 
@@ -34,39 +115,6 @@ namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
             return await dbContext.DbConnection.QueryAsync<InformationSecurity>(sql, parameters);
         }
 
-        private static string GetAllInformationSecurityRecordsSql()
-        {
-            string sql = @"SELECT
-            
-                company_code1           companyCode1, 
-                company_code2           companyCode2, 
-                company_type            companyType, 
-                company_name            companyName, 
-                company_name_en         companyNameEn, 
-                company_short_name      companyShortName, 
-                group_code              groupCode, 
-                region                  region, 
-                country                 country, 
-                role_code               roleCode,
-                ops_email               opsEmail,
-                ops_url                 opsUrl,
-                ops_email_url           opsEmailUrl,
-                ops_vulnerability       opsVulnerability,
-                ops_info                opsInfo,
-                dept_name               deptName,
-                location                location,
-                position                position,
-                person_name             personName,
-                person_code             personCode,
-                email                   email,
-                emergency_contact       emergencyContact,
-                language                language
-
-            FROM public.v_information_security;
-            ";
-
-            return sql;
-        }
 
         private static string GetInformationSecuritySearchSql(InformationSecuritySearchDto dto, out Dictionary<string, object> parameters )
         {
@@ -74,33 +122,8 @@ namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
             parameters = new Dictionary<string, object>();
             var whereClause = BuildWhereClause(dto, out parameters);
 
-            string sql = @$"SELECT
-            
-                company_code1           companyCode1, 
-                company_code2           companyCode2, 
-                company_type            companyType, 
-                company_name            companyName, 
-                company_name_en         companyNameEn, 
-                company_short_name      companyShortName, 
-                group_code              groupCode, 
-                region                  region, 
-                country                 country, 
-                role_code               roleCode,
-                ops_email               opsEmail,
-                ops_url                 opsUrl,
-                ops_email_url           opsEmailUrl,
-                ops_vulnerability       opsVulnerability,
-                ops_info                opsInfo,
-                dept_name               deptName,
-                location                location,
-                position                position,
-                person_name             personName,
-                person_code             personCode,
-                email                   email,
-                emergency_contact       emergencyContact,
-                language                language
-
-            FROM public.v_information_security
+            string sql = @$"
+            {baseSql}
             {whereClause};
             ";
 
