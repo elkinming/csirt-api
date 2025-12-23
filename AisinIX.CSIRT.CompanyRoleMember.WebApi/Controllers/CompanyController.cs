@@ -1,39 +1,39 @@
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
-using AisinIX.CSIRT.CompanyRoleMember.DBAccessors;
+using AisinIX.CSIRT.CompanyRoleMember.Models;
+using AisinIX.CSIRT.CompanyRoleMember.Services;
+using AisinIX.CSIRT.CompanyRoleMember.WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
-using Npgsql;
 
 [ApiController]
-[Route("api/test")]
-public class TestController : ControllerBase
+[Route("api/v1")]
+public class CompanyController : ControllerBase
 {
-    private readonly PostgresConnection _db;
-    private readonly ICompanyDBAccesor companyDBAccesor;
+    private readonly ICompanyService _companyService;
 
-    public TestController(PostgresConnection db, ICompanyDBAccesor companyDBAccesor)
+    /// <summary>
+    /// CompanyControllerの新しいインスタンスを初期化します。
+    /// </summary>
+    /// <param name="companyService">会社情報サービス</param>
+    public CompanyController(ICompanyService companyService)
     {
-        _db = db;
-        this.companyDBAccesor = companyDBAccesor;
+        _companyService = companyService;
     }
 
     [HttpGet]
-    public IActionResult Get()
+    /// <summary>
+    /// 全社情報一覧を取得します。
+    /// </summary>
+    /// <returns>会社情報の一覧</returns>
+    [Route("company/all")]
+    public async Task<IActionResult> GetAllCompanyData()
     {
-        using var conn = _db.GetConnection();
-        conn.Open();
-
-        using var cmd = new NpgsqlCommand("SELECT * FROM m_company", conn);
-        var result = cmd.ExecuteReader();
-
-        return Ok(result);
-    }
-
-    [HttpGet]
-    [Route("v2")]
-    public async Task<IActionResult> TestDapper()
-    {
-        var companyList = await companyDBAccesor.GetAllCompanyRecords();
-
-        return Ok(companyList);
+        var companyList = await _companyService.GetAllCompaniesAsync();
+        ApiResponse<List<Company>> response = new ApiResponse<List<Company>>();
+        response.statusCode = 200;
+        response.message = "Success";
+        response.data = companyList.ToList();
+        return Ok(response); 
     }
 }

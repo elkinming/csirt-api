@@ -13,6 +13,7 @@ using System.Net.Http;
 using System;
 using AisinIX.CSIRT.CompanyRoleMember.DBAccessors;
 using AisinIX.CSIRT.CompanyRoleMember.Services;
+
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using AisinIX.CSIRT.CompanyRoleMember.Db;
@@ -57,9 +58,13 @@ namespace AisinIX.CSIRT.CompanyRoleMember.WebApi
             //サービス
             services.AddScoped<ICompanyRoleMemberDBAccessor,CompanyRoleMemberDBAccessor>();
             services.AddScoped<ICompanyRoleMemberService,CompanyRoleMemberService>();
+            services.AddScoped<ICompanyService, CompanyService>();
             services.AddScoped<ICompanyDBAccesor, CompanyDBAccesor>();
+            services.AddScoped<ICompanyRoleOpsService, CompanyRoleOpsService>();
+            services.AddScoped<ICompanyRoleOpsDBAccessor, CompanyRoleOpsDBAccessor>();
             services.AddScoped<IInformationSecurityService, InformationSecurityService>();
             services.AddScoped<IInformationSecurityDBAccessor, InformationSecurityDBAccesor>();
+
 
             // Amateras関係
             services.AddHttpContextAccessor();
