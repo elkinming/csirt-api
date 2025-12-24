@@ -7,5 +7,6 @@ namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
     public interface ICompanyDBAccesor
     {
         Task<IEnumerable<Company>> GetAllCompanyRecords();
+        Task<bool> InsertCompanyRecordsArray(IEnumerable<Company> companies);
     }
 }

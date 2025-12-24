@@ -11,5 +11,12 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Services
         /// </summary>
         /// <returns>非同期操作を表すタスク。タスクの結果には会社の一覧が含まれます。</returns>
         Task<IEnumerable<Company>> GetAllCompaniesAsync();
+
+        /// <summary>
+        /// 複数の会社情報を非同期で登録します。
+        /// </summary>
+        /// <param name="companies">登録する会社情報のコレクション</param>
+        /// <returns>非同期操作を表すタスク。タスクの結果には登録の成否が含まれます。</returns>
+        Task<bool> InsertCompanyArrayAsync(IEnumerable<Company> companies);
     }
 }

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AisinIX.CSIRT.CompanyRoleMember.DBAccessors;
 using AisinIX.CSIRT.CompanyRoleMember.Models;
@@ -25,6 +27,21 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Services
         public async Task<IEnumerable<Company>> GetAllCompaniesAsync()
         {
             return await _companyDBAccessor.GetAllCompanyRecords();
+        }
+
+        /// <summary>
+        /// 複数の会社情報を非同期で登録します。
+        /// </summary>
+        /// <param name="companies">登録する会社情報のコレクション</param>
+        /// <returns>非同期操作を表すタスク。タスクの結果には登録の成否が含まれます。</returns>
+        public async Task<bool> InsertCompanyArrayAsync(IEnumerable<Company> companies)
+        {
+            if (companies == null || !companies.Any())
+            {
+                throw new ArgumentException("会社情報のコレクションがnullまたは空です。", nameof(companies));
+            }
+
+            return await _companyDBAccessor.InsertCompanyRecordsArray(companies);
         }
     }
 }

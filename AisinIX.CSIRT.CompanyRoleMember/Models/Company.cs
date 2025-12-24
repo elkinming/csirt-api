@@ -14,8 +14,8 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Models
         public string region { get; set; } = "";
         public string country { get; set; } = "";
         public string registUser { get; set; } = "";
-        public string registDate { get; set; } = "";
+        public DateTime registDate { get; set; } = new DateTime();
         public string updateUser { get; set; } = "";
-        public string lastUpdate { get; set; } = "";
+        public DateTime lastUpdate { get; set; } = new DateTime();
     }
 }
