@@ -56,15 +56,16 @@ namespace AisinIX.CSIRT.CompanyRoleMember.WebApi
             services.Configure<AppSettings>(Configuration);
             // HttpClient
             //サービス
-            services.AddScoped<ICompanyRoleMemberDBAccessor,CompanyRoleMemberDBAccessor>();
             services.AddScoped<ICompanyRoleMemberService,CompanyRoleMemberService>();
+            services.AddScoped<ICompanyRoleMemberDBAccessor,CompanyRoleMemberDBAccessor>();
             services.AddScoped<ICompanyService, CompanyService>();
             services.AddScoped<ICompanyDBAccesor, CompanyDBAccesor>();
             services.AddScoped<ICompanyRoleOpsService, CompanyRoleOpsService>();
             services.AddScoped<ICompanyRoleOpsDBAccessor, CompanyRoleOpsDBAccessor>();
             services.AddScoped<IInformationSecurityService, InformationSecurityService>();
             services.AddScoped<IInformationSecurityDBAccessor, InformationSecurityDBAccesor>();
-
+            services.AddScoped<ICompanyPermissionService, CompanyPermissionService>();
+            services.AddScoped<ICompanyPermissionDBAccessor, CompanyPermissionDBAccessor>();
 
             // Amateras関係
             services.AddHttpContextAccessor();
