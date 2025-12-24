@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using AisinIX.CSIRT.CompanyRoleMember.Models;
 using AisinIX.CSIRT.CompanyRoleMember.Db;
 using Dapper;
+using System;
 
 namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
 {
@@ -18,6 +19,58 @@ namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
         public async Task<IEnumerable<CompanyRoleOps>> GetAllCompanyRoleOpsRecords()
         {
             return await dbContext.DbConnection.QueryAsync<CompanyRoleOps>(GetAllCompanyRoleOpsRecordsSql());
+        }
+
+        public async Task<bool> InsertCompanyRoleOpsRecordsArray(IEnumerable<CompanyRoleOps> companyRoleOpsList)
+        {
+            dbContext.DbConnection.Open();
+            using var transaction = dbContext.DbConnection.BeginTransaction();
+            try
+            {
+                const string sql = @"
+                    INSERT INTO t_company_role_ops (
+                        company_code1,
+                        company_code2,
+                        role_code,
+                        ops_email,
+                        ops_url,
+                        ops_email_url,
+                        ops_vulnerability,
+                        ops_info,
+                        regist_user,
+                        regist_date,
+                        update_user,
+                        last_update
+                    ) VALUES (
+                        @companyCode1,
+                        @companyCode2,
+                        @roleCode,
+                        @opsEmail,
+                        @opsUrl,
+                        @opsEmailUrl,
+                        @opsVulnerability,
+                        @opsInfo,
+                        @registUser,
+                        @registDate,
+                        @updateUser,
+                        @lastUpdate
+                    )";
+
+                foreach (var companyRoleOps in companyRoleOpsList)
+                {
+                    await dbContext.DbConnection.ExecuteAsync(sql, companyRoleOps, transaction);
+                }
+                
+                transaction.Commit();
+                dbContext.DbConnection.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                transaction.Rollback();
+                dbContext.DbConnection.Close();
+                throw;
+            }
         }
 
         private static string GetAllCompanyRoleOpsRecordsSql()

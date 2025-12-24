@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -40,6 +41,56 @@ namespace AisinIX.CSIRT.CompanyRoleMember.WebApi.Controllers
             };
             
             return Ok(response);
+        }
+
+
+        /// <summary>
+        /// 複数の会社ロール運用情報を登録します。
+        /// </summary>
+        /// <param name="companyRoleOpsList">登録する会社ロール運用情報のリスト</param>
+        /// <returns>登録結果を含むレスポンス</returns>
+        [HttpPost]
+        [Route("company-role-ops/list")]
+        public async Task<IActionResult> InsertCompanyRoleOpsList([FromBody] List<CompanyRoleOps> companyRoleOpsList)
+        {
+            if (companyRoleOpsList == null || !companyRoleOpsList.Any())
+            {
+                return BadRequest(new ApiResponse<object>
+                {
+                    statusCode = 400,
+                    message = "リクエストボディが無効です。",
+                    data = null
+                });
+            }
+
+            try
+            {
+                var result = await _companyRoleOpsService.InsertCompanyRoleOpsArrayAsync(companyRoleOpsList);
+                return Ok(new ApiResponse<object>
+                {
+                    statusCode = 200,
+                    message = "会社ロール運用情報の登録が完了しました。",
+                    data = new { success = result }
+                });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new ApiResponse<object>
+                {
+                    statusCode = 400,
+                    message = ex.Message,
+                    data = null
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<object>
+                {
+                    statusCode = 500,
+                    message = $"会社ロール運用情報の登録中にエラーが発生しました: {ex.Message}",
+                    data = null
+                });
+            }
         }
     }
 }
