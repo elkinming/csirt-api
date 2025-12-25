@@ -66,6 +66,8 @@ namespace AisinIX.CSIRT.CompanyRoleMember.WebApi
             services.AddScoped<IInformationSecurityDBAccessor, InformationSecurityDBAccesor>();
             services.AddScoped<ICompanyPermissionService, CompanyPermissionService>();
             services.AddScoped<ICompanyPermissionDBAccessor, CompanyPermissionDBAccessor>();
+            services.AddScoped<ILogInfoService, LogInfoService>();
+            services.AddScoped<ILogInfoDBAccessor, LogInfoDBAccessor>();
 
             // Amateras関係
             services.AddHttpContextAccessor();
