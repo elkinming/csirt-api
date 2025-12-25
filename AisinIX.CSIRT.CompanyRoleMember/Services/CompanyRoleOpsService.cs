@@ -41,6 +41,46 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Services
                 throw new ArgumentException("会社ロール運用情報のコレクションがnullまたは空です。", nameof(companyRoleOpsList));
             }
 
+            // Validate each company role ops in the list
+            foreach (var ops in companyRoleOpsList)
+            {
+                if (string.IsNullOrWhiteSpace(ops.companyCode1))
+                    throw new ArgumentException("会社コード1は必須です。", nameof(CompanyRoleOps.companyCode1));
+                    
+                if (string.IsNullOrWhiteSpace(ops.companyCode2))
+                    throw new ArgumentException("会社コード2は必須です。", nameof(CompanyRoleOps.companyCode2));
+                    
+                if (ops.roleCode <= 0)
+                    throw new ArgumentException("有効なロールコードを指定してください。", nameof(CompanyRoleOps.roleCode));
+                    
+                if (string.IsNullOrWhiteSpace(ops.opsEmail))
+                    throw new ArgumentException("運用メールは必須です。", nameof(CompanyRoleOps.opsEmail));
+                    
+                if (string.IsNullOrWhiteSpace(ops.opsUrl))
+                    throw new ArgumentException("運用URLは必須です。", nameof(CompanyRoleOps.opsUrl));
+                    
+                if (string.IsNullOrWhiteSpace(ops.opsEmailUrl))
+                    throw new ArgumentException("運用メールURLは必須です。", nameof(CompanyRoleOps.opsEmailUrl));
+                    
+                if (string.IsNullOrWhiteSpace(ops.opsVulnerability))
+                    throw new ArgumentException("脆弱性は必須です。", nameof(CompanyRoleOps.opsVulnerability));
+
+                if (string.IsNullOrWhiteSpace(ops.opsInfo))
+                    throw new ArgumentException("情報は必須です。", nameof(CompanyRoleOps.opsInfo));
+                
+                if (string.IsNullOrWhiteSpace(ops.registUser))
+                    throw new ArgumentException("登録ユーザーは必須です。", nameof(CompanyRoleOps.registUser));
+                    
+                if (ops.registDate == default)
+                    ops.registDate = DateTime.UtcNow;
+                    
+                if (string.IsNullOrWhiteSpace(ops.updateUser))
+                    ops.updateUser = ops.registUser;
+                    
+                if (ops.lastUpdate == default)
+                    ops.lastUpdate = DateTime.UtcNow;
+            }
+
             return await _companyRoleOpsDBAccessor.InsertCompanyRoleOpsRecordsArray(companyRoleOpsList);
         }
     }

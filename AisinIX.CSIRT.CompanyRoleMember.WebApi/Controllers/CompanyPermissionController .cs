@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -39,6 +40,54 @@ namespace AisinIX.CSIRT.CompanyRoleMember.WebApi.Controllers
                 data = permissions.ToList()
             };
             return Ok(response);
+        }
+
+        /// <summary>
+        /// 会社権限情報のリストを登録します。
+        /// </summary>
+        /// <param name="permissions">登録する会社権限情報のリスト</param>
+        /// <returns>登録結果を含むレスポンス</returns>
+        [HttpPost("company-permissions/list")]
+        public async Task<IActionResult> InsertCompanyPermissionList([FromBody] List<CompanyPermission> permissions)
+        {
+            if (permissions == null || !permissions.Any())
+            {
+                return BadRequest(new ApiResponse<object>
+                {
+                    statusCode = 400,
+                    message = "リクエストボディが無効です。",
+                    data = null
+                });
+            }
+
+            try
+            {
+                var result = await _companyPermissionService.InsertCompanyPermissionArrayAsync(permissions);
+                return Ok(new ApiResponse<object>
+                {
+                    statusCode = 200,
+                    message = "会社権限情報の登録が完了しました。",
+                    data = new { success = result }
+                });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new ApiResponse<object>
+                {
+                    statusCode = 400,
+                    message = ex.Message,
+                    data = null
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new ApiResponse<object>
+                {
+                    statusCode = 500,
+                    message = $"会社権限情報の登録中にエラーが発生しました: {ex.Message}",
+                    data = null
+                });
+            }
         }
     }
 }

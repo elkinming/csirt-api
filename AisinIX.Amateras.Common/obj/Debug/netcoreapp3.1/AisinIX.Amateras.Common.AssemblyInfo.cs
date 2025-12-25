@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AisinIX.Amateras.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97cf8d367dc726576e2771aceaa715473486c3e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a41facbd08eb99283e28bbc69a3b55b532fd122")]
 [assembly: System.Reflection.AssemblyProductAttribute("AisinIX.Amateras.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AisinIX.Amateras.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

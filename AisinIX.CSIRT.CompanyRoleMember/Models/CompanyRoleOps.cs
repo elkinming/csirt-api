@@ -6,7 +6,7 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Models
     {
         public string companyCode1 { get; set; } = "";
         public string companyCode2 { get; set; } = "";
-        public int roleCode { get; set; } = 1;
+        public int roleCode { get; set; }
         public string opsEmail { get; set; } = "";
         public string opsUrl { get; set; } = "";
         public string opsEmailUrl { get; set; } = "";

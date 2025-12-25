@@ -7,5 +7,7 @@ namespace AisinIX.CSIRT.CompanyRoleMember.DBAccessors
     public interface ICompanyPermissionDBAccessor
     {
         Task<IEnumerable<CompanyPermission>> GetAllCompanyPermissionRecords();
+
+        Task<bool> InsertCompanyPermissionRecordsArray(IEnumerable<CompanyPermission> permissions);
     }
 }
