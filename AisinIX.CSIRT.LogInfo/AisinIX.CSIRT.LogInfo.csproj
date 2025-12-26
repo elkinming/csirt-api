@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.66" />
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0-preview.2.21154.6" />
+    <PackageReference Include="Npgsql" Version="6.0.11" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AisinIX.Amateras.Common\AisinIX.Amateras.Common.csproj" />
+    <ProjectReference Include="..\AisinIX.Amateras.Common.Log4Net\AisinIX.Amateras.Common.Log4Net.csproj" />
+    <ProjectReference Include="..\AisinIX.Amateras.Common.Oracle\AisinIX.Amateras.Common.Oracle.csproj" />
+    <ProjectReference Include="..\AisinIX.CSIRT.Common\AisinIX.CSIRT.Common.csproj" />
+  </ItemGroup>
+
+</Project>

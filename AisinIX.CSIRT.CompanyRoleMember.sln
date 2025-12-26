@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AisinIX.CSIRT.CompanyPermis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AisinIX.CSIRT.InformationSecurity", "AisinIX.CSIRT.InformationSecurity\AisinIX.CSIRT.InformationSecurity.csproj", "{5C719D90-2B03-57B7-6260-7B98BC4A1E7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AisinIX.CSIRT.LogInfo", "AisinIX.CSIRT.LogInfo\AisinIX.CSIRT.LogInfo.csproj", "{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,18 @@ Global
 		{5C719D90-2B03-57B7-6260-7B98BC4A1E7C}.Release|x64.Build.0 = Release|Any CPU
 		{5C719D90-2B03-57B7-6260-7B98BC4A1E7C}.Release|x86.ActiveCfg = Release|Any CPU
 		{5C719D90-2B03-57B7-6260-7B98BC4A1E7C}.Release|x86.Build.0 = Release|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Debug|x64.Build.0 = Debug|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Debug|x86.Build.0 = Debug|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Release|x64.ActiveCfg = Release|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Release|x64.Build.0 = Release|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Release|x86.ActiveCfg = Release|Any CPU
+		{BEA2036E-6F3B-EFAE-DA64-CC9E87BFC0CE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

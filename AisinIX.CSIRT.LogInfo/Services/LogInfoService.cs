@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AisinIX.CSIRT.CompanyRoleMember.DBAccessors;
-using AisinIX.CSIRT.CompanyRoleMember.Models;
+using AisinIX.CSIRT.LogInfo.DBAccessors;
+using AisinIX.CSIRT.LogInfo.Models;
 
-namespace AisinIX.CSIRT.CompanyRoleMember.Services
+namespace AisinIX.CSIRT.LogInfo.Services
 {
     /// <summary>
     /// ログ情報関連のサービス
@@ -29,7 +29,7 @@ namespace AisinIX.CSIRT.CompanyRoleMember.Services
         /// <param name="year">年</param>
         /// <param name="month">月</param>
         /// <returns>非同期操作を表すタスク。タスクの結果にはログ情報の一覧が含まれます。</returns>
-        public async Task<IEnumerable<LogInfo>> GetLogDataByDate(int year, int month)
+        public async Task<IEnumerable<LogInfoModel>> GetLogDataByDate(int year, int month)
         {
             // Input validation is handled by the DBAccessor
             return await _logInfoDBAccessor.GetLogDataByMonthAndYear(year, month);

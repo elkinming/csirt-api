@@ -11,12 +11,11 @@ using Npgsql;
 [ApiController]
 public class InformationSecurityController : ControllerBase
 {
-    private readonly PostgresConnection _db;
+
     private readonly IInformationSecurityService informationSecurityService;
 
-    public InformationSecurityController(PostgresConnection db, IInformationSecurityService informationSecurityService)
+    public InformationSecurityController(IInformationSecurityService informationSecurityService)
     {
-        _db = db;
         this.informationSecurityService = informationSecurityService;
     }
 

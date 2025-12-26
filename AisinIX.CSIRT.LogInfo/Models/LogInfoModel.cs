@@ -1,8 +1,8 @@
 using System;
 
-namespace AisinIX.CSIRT.CompanyRoleMember.Models
+namespace AisinIX.CSIRT.LogInfo.Models
 {
-    public class LogInfo
+    public class LogInfoModel
     {
         public string userCode { get; set; } = "";
         public DateTime logDate { get; set; } = new DateTime();

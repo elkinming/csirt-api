@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AisinIX.CSIRT.CompanyRoleMember.Models;
-using AisinIX.CSIRT.CompanyRoleMember.Services;
+using AisinIX.CSIRT.LogInfo.Models;
+using AisinIX.CSIRT.LogInfo.Services;
 using AisinIX.CSIRT.WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -42,7 +42,7 @@ namespace AisinIX.CSIRT.WebApi.Controllers
             {
                 var logs = await _logInfoService.GetLogDataByDate(year, month);
                 
-                var response = new ApiResponse<List<LogInfo>>
+                var response = new ApiResponse<List<LogInfoModel>>
                 {
                     statusCode = 200,
                     message = "ログ情報の取得が完了しました。",

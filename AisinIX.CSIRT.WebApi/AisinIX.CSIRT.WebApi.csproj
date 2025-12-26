@@ -29,6 +29,7 @@
     <ProjectReference Include="..\AisinIX.CSIRT.CompanyRoleOps\AisinIX.CSIRT.CompanyRoleOps.csproj" />
     <ProjectReference Include="..\AisinIX.CSIRT.Company\AisinIX.CSIRT.Company.csproj" />
     <ProjectReference Include="..\AisinIX.CSIRT.InformationSecurity\AisinIX.CSIRT.InformationSecurity.csproj" />
+    <ProjectReference Include="..\AisinIX.CSIRT.LogInfo\AisinIX.CSIRT.LogInfo.csproj" />
   </ItemGroup>
 
 </Project>

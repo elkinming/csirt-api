@@ -21,6 +21,8 @@ using AisinIX.CSIRT.CompanyPermission.DBAccessors;
 using AisinIX.CSIRT.CompanyPermission.Services;
 using AisinIX.CSIRT.InformationSecurity.DBAccessors;
 using AisinIX.CSIRT.InformationSecurity.Services;
+using AisinIX.CSIRT.LogInfo.DBAccessors;
+using AisinIX.CSIRT.LogInfo.Services;
 
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
@@ -89,7 +91,6 @@ namespace AisinIX.CSIRT.WebApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AisinIX.CSIRT.WebApi", Version = "v1" });
             });
 
-            services.AddScoped<PostgresConnection>();
             services.AddSingleton<DapperDbContext>();
         }
 
