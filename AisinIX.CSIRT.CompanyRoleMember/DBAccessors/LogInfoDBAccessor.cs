@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using AisinIX.CSIRT.CompanyRoleMember.Db;
+using AisinIX.CSIRT.Common.Db;
 using AisinIX.CSIRT.CompanyRoleMember.Models;
 using Dapper;
 

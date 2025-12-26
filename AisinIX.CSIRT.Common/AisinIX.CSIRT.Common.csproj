@@ -20,7 +20,6 @@
     <ProjectReference Include="..\AisinIX.Amateras.Common\AisinIX.Amateras.Common.csproj" />
     <ProjectReference Include="..\AisinIX.Amateras.Common.Log4Net\AisinIX.Amateras.Common.Log4Net.csproj" />
     <ProjectReference Include="..\AisinIX.Amateras.Common.Oracle\AisinIX.Amateras.Common.Oracle.csproj" />
-    <ProjectReference Include="..\AisinIX.CSIRT.Common\AisinIX.CSIRT.Common.csproj" />
   </ItemGroup>
 
 </Project>
